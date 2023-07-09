@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="recipe.model.RecipeBean">
+  	<select id="GetAllRecipe" resultType="recipe.model.RecipeBean">
+  		select recipe.recipe_num,recipe.recipe_name,recipe.recipe_category,recipe.servings,recipe.cook_image,recipe.readcount <if test="id!=''">, sel.rec</if> from recipe <if test="id!=''">full outer join
+		(select count(*)as rec , recipe_num from bookmark where id=#{id} group by recipe_num) sel on sel.recipe_num = recipe.recipe_num</if>
+  		<if test="whatColumn == 'recipename'">
+  			where recipe_name like #{keyword}
+  		</if>
+  		<if test="whatColumn == 'recipecategory'">
+  			where recipe_category like #{keyword}
+  		</if>
+  	</select>
+  	
+  	<select id="GetTotalCount" resultType="int">
+  		select count(*) from recipe
+  		<if test="whatColumn == 'recipename'">
+  			where recipe_name like #{keyword}
+  		</if>
+  		<if test="whatColumn == 'recipecategory'">
+  			where recipe_category like #{keyword}
+  		</if>
+  	</select>
+  	<select id="GetRecipe" resultType="recipe.model.RecipeBean">
+  		select * from recipe
+  		where recipe_num =#{recipenum}
+  	</select>
+  	
+  	<select id="GetRecipeContent" resultType="recipe.model.RecipeContentBean">
+  		select * from recipe_content
+  		where recipe_num=#{recipenum}
+  		order by recipe_content_num asc
+  	</select>
+  	
+  	<select id="GetFood" resultType="recipe.model.FoodBean">
+  		select * from recipe_food
+  		where recipe_num=#{recipenum}
+  	</select>
+  	
+  	<select id="GetBookmarkById" resultType="int">
+  		select recipe_num from bookmark
+  		where id = #{id}
+  	</select>
+  	
+  	<delete id="DeleteBookmark">
+  		delete bookmark
+  		where id=#{id} and recipe_num=#{recipenum}
+  	</delete>
+  	
+  	<select id="GetReviewByRecipe" resultType="recipe.model.RecipeReviewBean">
+  		select * from review
+  		where recipe_num=#{recipenum}
+  	</select>
+  	
+  	<insert id="InsertReview">
+  		insert into review
+  		values(recipe_re_seq.nextval,#{review},#{id},sysdate,#{recipenum},0) 
+  	</insert>
+  	
+  	<select id="GetBookmarkCount" resultType="int">
+  		select count(*) from bookmark
+  		where recipe_num=#{recipenum}
+  	</select>
+  	
+  	<insert id="InsertBookMark">
+  		insert into bookmark
+  		values(bookmark_seq.nextval,#{id},#{recipenum})
+  	</insert>
+  	
+  	<insert id="InsertReport">
+  		insert into review_report
+  		values(recipe_report_seq.nextval,#{reportcontent},#{reviewnum},#{reportreason},#{id},#{idorigin})
+  	</insert>
+  	
+  	<select id="CheckBookMark" resultType="int">
+  		select count(*) from bookmark
+  		where id=#{id} and recipe_num=#{recipenum}
+  	</select>
+  	
+  	<select id="GetingrecipeTotalCount" resultType="int">
+  		select count(*) from recipe join recipe_food food on recipe.recipe_num = food.recipe_num
+		where food_name like #{keyword}
+  	</select>
+  	<select id="GetAllRecipeByIngre" resultType="recipe.model.RecipeBean">
+		select recipe.recipe_num,recipe.recipe_name,recipe.recipe_category,recipe.servings,recipe.cook_image,recipe.readcount<if test="id!=''">, sel.rec</if> from recipe join recipe_food food on recipe.recipe_num = food.recipe_num 
+		<if test="id!=''">full outer join (select count(*)as rec , recipe_num from bookmark where id=#{id} group by recipe_num) sel on sel.recipe_num = recipe.recipe_num</if> where food_name like #{keyword}
+		order by recipe_num 
+  	</select>
+  	<select id="GetFoodRecipeTotalCount" resultType="int">
+  		select distinct count(*) from recipe_food where food_category=#{keyword}
+  	</select>
+  	<!-- 식재료 카테고리별 recipe가져오기 -->
+  	<select id="GetAllRecipeByFoodCate" resultType="recipe.model.RecipeBean">
+  		select distinct recipe.recipe_num,recipe.recipe_name,recipe.recipe_category,recipe.servings,recipe.cook_image,recipe.readcount<if test="id!=''">, sel.rec</if> from recipe join recipe_food
+		on recipe.recipe_num = recipe_food.recipe_num <if test="id!=''"> full outer join (select count(*)as rec , recipe_num from bookmark where id=#{id} group by recipe_num) sel on sel.recipe_num = recipe.recipe_num</if>
+		where food_category=#{keyword} order by recipe.recipe_num
+  	</select>
+  	<!-- 조회수 업데이트 -->
+  	<update id="UpdateReadCount">
+  		update recipe set readcount=readcount+1 where recipe_num=#{recipenum}
+  	</update>
+  	<!-- 조회수 순서대로 recipe가져오기 -->
+  	<select id="GetAllRecipeByReadCount" resultType="recipe.model.RecipeBean">
+  		select recipe.recipe_num,recipe.recipe_name,recipe.recipe_category,recipe.servings,recipe.cook_image,recipe.readcount<if test="id!=''">, sel.rec</if> from recipe 
+		<if test="id!=''"> full outer join (select count(*)as rec , recipe_num from bookmark where id=#{id} group by recipe_num) sel on sel.recipe_num = recipe.recipe_num</if>
+		order by readcount desc
+  	</select>
+  	<!-- bookmark번호로 recipe가져오기 -->
+  	<select id="GetAllRecipeByBookMark" resultType="recipe.model.RecipeBean">
+  		select recipe.recipe_num,recipe.recipe_name,recipe.recipe_category,recipe.servings,recipe.cook_image,recipe.readcount <if test="id!=''">, sel.rec</if> ,bookmarknum
+		from recipe full outer join (select recipe_num, count(*)as bookmarknum from bookmark group by recipe_num) mark on recipe.recipe_num = mark.recipe_num
+   		 <if test="id!=''">full outer join (select count(*)as rec , recipe_num from bookmark where id=#{id} group by recipe_num) sel on sel.recipe_num = recipe.recipe_num</if>
+		order by bookmarknum desc nulls last
+  	</select>
+  	<!-- 식재료카테고리 통해서 식재료 이름 가져오기 -->
+  	<select id="GetIngredientByCategory" resultType="String">
+  		select ing_name from ingredient where ing_category = #{keyword}
+  	</select>
+  	<!-- 냉장고 식재료로 추천레시피 갯수 -->
+  	<select id="GetRecipeTotalCountByIngre" resultType="int">
+  		select distinct count(*) as cnt from recipe join recipe_food on recipe.recipe_num = recipe_food.recipe_num 
+		where REGEXP_LIKE(recipe_food.food_name,#{str})
+  	</select>
+  	
+  	<!-- 냉장고 식재료로 추천레시피 검색 -->
+  	<select id="GetRecipeNumByIngredient" resultType="recipe.model.RecipeBean">
+	  	select distinct recipe.recipe_num,recipe.recipe_name,recipe.recipe_category,recipe.servings,recipe.cook_image,recipe.readcount <if test="id!=''">, sel.rec</if>
+		from recipe <if test="id!=''"> full outer join (select count(*)as rec , recipe_num from bookmark where id=#{id} group by recipe_num) sel on sel.recipe_num = recipe.recipe_num</if>
+		join recipe_food on recipe.recipe_num = recipe_food.recipe_num where REGEXP_LIKE(recipe_food.food_name,#{str}) 
+		order by recipe_num
+  	</select>
+  	
+  	<select id="GetBookMarkRecipe" resultType="recipe.model.RecipeBean">
+  		select * from recipe join bookmark on recipe.recipe_num = bookmark.recipe_num
+  		where id =#{id} 
+  		<if test="whatColumn == 'recipe_category'">
+  			and recipe_category =#{keyword}
+  		</if>
+  	</select>
+  	<delete id="DeleteReview">
+  		delete from review where review_num=#{reveiwnum}
+  	</delete>
+  	<update id="UpdateReview">
+  		update review set review=#{review} where review_num=#{reviewnum}
+  	</update>
+  	<select id="GetRecipeForMain" resultType="recipe.model.RecipeBean">
+  		select recipe.recipe_num,recipe.recipe_name,recipe.recipe_category,recipe.servings,recipe.cook_image,recipe.readcount
+		from recipe full outer join (select rownum as rank, recipe_num from(select recipe_num, count(*)as bookmarknum from bookmark group by recipe_num order by bookmarknum desc)) mark on recipe.recipe_num = mark.recipe_num
+		order by rank
+  	</select>
+  </mapper>
