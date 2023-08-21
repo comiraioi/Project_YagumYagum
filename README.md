@@ -50,9 +50,9 @@
 ### 3-1. 회원
 <div>
 <details>
-<summary>⭐메인 페이지</summary>
+<summary>⭐ 메인 페이지</summary>
 <ul>
-    <li>⭐슬라이드 배너: 사이트 소개 및 추천 레시피</li>
+    <li>⭐ 슬라이드 배너: 사이트 소개 및 추천 레시피</li>
     <li>찜 많은 순 레시피 상위 4개</li>
     <li>상품 목록</li>
 </ul>
@@ -118,7 +118,7 @@
 <dd>
 로그인 시 접근 가능한 페이지로 사용자가 보관 위치별 식재료 관리를 할 수 있다.
 <details>
-<summary>배너</summary>
+<summary>⭐ 배너</summary>
 <ul>
     <li>식재료 통계: 보관 위치별 식재료 수, 소비기한 3일 이하 식재료 수</li>
     <li>식재료 기반 레시피 검색: 사용자 냉장고에 있는 식재료명을 넘겨주어 레시피 검색 페이지로 이동한다.</li>
@@ -126,7 +126,7 @@
 </ul>
 </details>
 <details>
-<summary>식재료 목록</summary>
+<summary>⭐ 식재료 목록</summary>
 <ul>
     <li>슬라이드로 전체, 냉장고, 냉동고, 실온보관 등 위치별 식재료를 한눈에 확인 할 수 있다.</li>
     <li>체크박스로 보관 위치별 식재료 다중 선택 및 개별 선택이 가능하다.</li>
@@ -134,7 +134,7 @@
 </ul>
 </details>
 <details>
-<summary>식재료 추가</summary>
+<summary>⭐ 식재료 추가</summary>
 <ul>
     <li>특정 보관 위치의 슬라이드에서 추가 버튼을 누르면 해당 보관 위치로 자동 설정되며 변경도 가능하다.</li>
     <li>식재료 카테고리별 토글을 설정하였다.</li>
@@ -145,14 +145,14 @@
 </ul>
 </details>
 <details>
-<summary>식재료 수정</summary>
+<summary>⭐ 식재료 수정</summary>
 <ul>
     <li>기본 식재료는 소비기한 변경, 메모 추가가 가능하다.</li>
     <li>사용자 식재료는 식재료명 작성이 가능하고 카테고리 변경, 소비기한 변경이 가능하다.</li>
 </ul>
 </details>
 <details>
-<summary>식재료 삭제</summary>
+<summary>⭐ 식재료 삭제</summary>
 <ul>
     <li>다중 선택 또는 개별 선택하여 식재료를 삭제할 수 있다.</li>
     <li>보관 위치별로 전체 삭제가 가능하다.</li>
@@ -165,15 +165,15 @@
 <h4>⭐ 장보기 메모</h4>
 <dd>로그인 시 사용할 수 있으며 나의 냉장고, 상품 목록 페이지에서 사용자가 쇼핑 리스트를 메모할 수 있다. 작성한 메모를 클릭하면 해당 상품 검색 결과 페이지로 이동한다.
 <details>
-<summary>메모 쓰기</summary>
+<summary>⭐ 메모 쓰기</summary>
 메모 및 상세 메모 작성 후 추가가 가능하다 
 </details>
 <details>
-<summary>메모 저장</summary>
+<summary>⭐ 메모 저장</summary>
 메모 옆 체크박스의 체크 유무가 유지된다.
 </details>
 <details>
-<summary>메모 삭제</summary>
+<summary>⭐ 메모 삭제</summary>
 메모 옆 체크박스의 체크 유무가 유지된다.
 </details>
 </dd>
@@ -320,7 +320,7 @@ KG 이니시스 결제창을 띄워 네이버페이, 카카오페이, 카드 결
 ### 3-2. 관리자
 <div>
 <details>
-<summary>⭐메인 페이지</summary>
+<summary>⭐ 메인 페이지</summary>
 <ul>
     <li>매출 및 월별 가입자 수 추이</li>
     <li>사용자 게시판 최신글 5개</li>
@@ -359,21 +359,21 @@ KG 이니시스 결제창을 띄워 네이버페이, 카카오페이, 카드 결
 </div>
 
 <div>
-<h4>식재료 관리</h4>
+<h4>⭐식재료 관리</h4>
 <details>
-<summary>식재료 목록</summary>
+<summary>⭐ 식재료 목록</summary>
 식재료 정보 보기, 검색, 정렬
 </details>
 <details>
-<summary>식재료 추가</summary>
+<summary>⭐ 식재료 추가</summary>
 식재료명 중복 체크하여 식재료 추가
 </details>
 <details>
-<summary>식재료 수정</summary>
+<summary>⭐ 식재료 수정</summary>
 아이콘 이미지, 카테고리, 식재료명(중복 체크, 기존 식재료명으로 유지 가능), 소비기한 등 수정
 </details>
 <details>
-<summary>식재료 삭제</summary>
+<summary>⭐ 식재료 삭제</summary>
 사용자 냉장고에 추가되어있는 식재료는 삭제 불가능
 </details>
 </div>
