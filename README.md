@@ -5,7 +5,7 @@
 
 * [프로젝트 개발 계획서](https://drive.google.com/file/d/1_PssbkaE6d5KJAjxExHMQXwDqBo37Z3n/view?usp=drive_link)
 * [프로젝트 발표 ppt](https://drive.google.com/file/d/1VLI1FRs1U2VpuRQHEVHY4Tr-yTuZhRAN/view?usp=drive_link) - 페이지별 캡쳐 및 상세 설명이 포함되어 있습니다.
-<hr>
+<hr><br>
 
 ## 목차
 1. [개요](#1.-개요)
@@ -30,6 +30,27 @@
 
 ## 3. 기능
 ### 3-1. 주요 기능
+페이지 별 캡쳐 및 상세 설명은 [여기](#프로젝트-개발-계획서) 참고
+#### 회원
+##### 회원가입 및 로그인
+<details>
+<summary>회원 가입</summary>
+- 회원가입 창에서 정보를 입력하여 가입한다.
+- 회원가입이 되어있지 않은 상태에서 카카오 로그인하기 버튼을 누르면 사용자의 카카오 계정 정보로 폼이 채워진 회원가입 창으로 이동한다.
+- 주소 입력 시 카카오 우편번호 검색 API 사용
+</details>
+<details>
+<summary>로그인</summary>
+- 회원 가입한 정보를 통한 로그인
+- 카카오 계정을 통한 로그인
+</details>
+<details>
+<summary>회원 탈퇴</summary>
+- 비밀번호 입력 후 일치하면 탈퇴 처리 된다.
+</details>
+
+##### 
+
 ### 3-2. 담당 기능
 
 <br>
