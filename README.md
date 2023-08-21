@@ -1,6 +1,6 @@
 <div align=center><h1>🥗야금야금</h1></div>
 냉장고 관리와 재료 기반 레시피 큐레이션 및 커뮤니티 기능을 통합 제공하고 쇼핑몰 기능을 추가하여 식재료에 관한 모든 것을 한번에 해결할 수 있는 통합 웹 서비스입니다.
-<br>
+<br><br>
 
 * [프로젝트 개발 계획서](https://drive.google.com/file/d/1_PssbkaE6d5KJAjxExHMQXwDqBo37Z3n/view?usp=drive_link)
 * [프로젝트 발표 ppt](https://drive.google.com/file/d/1VLI1FRs1U2VpuRQHEVHY4Tr-yTuZhRAN/view?usp=drive_link) - 페이지별 캡쳐 및 상세 설명이 포함되어 있습니다.
