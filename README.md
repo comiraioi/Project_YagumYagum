@@ -5,7 +5,6 @@
 
 * [프로젝트 개발 계획서](https://drive.google.com/file/d/1_PssbkaE6d5KJAjxExHMQXwDqBo37Z3n/view?usp=drive_link)
 * [프로젝트 발표 ppt](https://drive.google.com/file/d/1VLI1FRs1U2VpuRQHEVHY4Tr-yTuZhRAN/view?usp=drive_link) - 페이지별 캡쳐 및 상세 설명이 포함되어 있습니다.
-<hr><br>
 
 ## 목차
 1. [개요](#1.-개요)
