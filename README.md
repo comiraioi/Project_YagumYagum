@@ -29,7 +29,7 @@
 * 기술 스택 및 활용 데이터 <br>
 <img src="https://github.com/comiraioi/Project_YagumYagum/assets/134984755/3c491caf-4669-4002-a93d-e859bfe1fbc1" width=600> <br><br>
 * 와이어 프레임 및 사이트 맵 <br>
-<img src="https://github.com/comiraioi/Project_YagumYagum/assets/134984755/92b554de-faa6-4bd8-a4f6-0cca74bfa9b1" width=600>  <br><br>
+<img src="https://github.com/comiraioi/Project_YagumYagum/assets/134984755/09fab3be-db88-4482-a6df-99b438a5248d" width=600>  <br><br>
 * ERD <br>
 <img src="https://github.com/comiraioi/Project_YagumYagum/assets/134984755/eacdd669-7e90-4536-89fc-55cac5977efd" width=600>  <br><br>
 
