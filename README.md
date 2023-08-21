@@ -23,7 +23,7 @@
 고물가가 지속되는 가운데 코로나로 급증했던 배달 음식 수요가 감소하고 외식 대신 집에서 식사를 해결하는 가구가 증가하고 있다. 이에 시중에 있던 냉장고 식재료 관리 앱의 기능에 레시피 큐레이션 및 커뮤니티 서비스와 식재료 쇼핑몰을 통합하여 식재료에 관한 모든 것을 한번에 해결할 수 있는 통합 웹 서비스를 개발하고자 하였다.
 
 ### 프로젝트 시연
-<img src="https://github.com/comiraioi/Project_YagumYagum/assets/134984755/4f12e4f3-ae24-4836-9266-51ca325dffe0" width=600> <br>
+<img src="https://github.com/comiraioi/Project_YagumYagum/assets/134984755/5dc8531c-cbb7-4eaa-9caf-cee6749b736c" width=600> <br>
 
 ## 2. 아키텍처
 * 기술 스택 및 활용 데이터 <br>
