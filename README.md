@@ -76,7 +76,6 @@
     <li>카카오 계정을 통한 로그인</li>
 </ul>
 </details>
-
 </dd>
 </div>
 
@@ -93,8 +92,8 @@
 <details>
 <summary>찜 목록</summary>
 <ul>
-    <li></li>
-    <li></li>
+    <li>찜한 상품 목록 확인, 정렬, 검색</li>
+    <li>상품명 클릭 시 상품 상세 페이지로 이동한다.</li>
 </ul>
 </details>
 <details>
@@ -109,14 +108,6 @@
 <ul>
     <li>환불 요청 버튼을 클릭하면 환불 요청 중으로 거래 상태가 바뀐다.</li>
     <li>관리자가 환불을 승인하면 환불 승인 완료로 거래 상태가 바뀐다.</li>
-</ul>
-</details>
-<details>
-<summary></summary>
-<ul>
-    <li></li>
-    <li></li>
-    <li></li>
 </ul>
 </details>
 </dd>
