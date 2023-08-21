@@ -16,7 +16,7 @@
 <img src="https://github.com/comiraioi/Project_YagumYagum/assets/134984755/be418e5a-038c-43db-a259-eea9c275dbaa" width=700>
 
 #### 프로젝트 시연
-<img src="https://github.com/comiraioi/Project_YagumYagum/assets/134984755/6caf1a28-c8e9-4051-8c5c-652b602f9556">
+<img src="https://github.com/comiraioi/Project_YagumYagum/assets/134984755/6caf1a28-c8e9-4051-8c5c-652b602f9556" width=700>
 
 ## 2. 아키텍처
 
