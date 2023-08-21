@@ -2,8 +2,7 @@
 <h1>🥗야금야금</h1>
 냉장고 관리와 재료 기반 레시피 큐레이션 및 커뮤니티 기능을 통합 제공하고 쇼핑몰 기능을 추가하여 식재료에 관한 모든 것을 한번에 해결할 수 있는 통합 웹 서비스입니다.</div>
 <br>
-- [프로젝트 발표 ppt](file:///C:/Users/Comi/%ED%8C%80%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/Team%EC%9A%94%EB%A6%AC%EC%A1%B0%EB%A6%AC_%EB%AC%B8%EC%88%98%ED%98%84,%EB%B3%80%EA%B8%B0%ED%98%81,%EC%9C%A0%EC%84%B1%ED%98%B8,%EC%9D%B4%EC%88%98%EC%A7%84,%EC%9D%B4%EC%9A%A9%EC%B0%BD.pdf)
-
+- [프로젝트 발표 ppt](C:/Users/Comi/팀프로젝트/Project_YagumYagum.pdf)
 ## 목차
 1. [개요](#1.-개요)
 2. [아키텍처](#2.-아키텍처)
