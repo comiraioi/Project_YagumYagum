@@ -12,7 +12,7 @@
 
 ## 1. 개요
 - 개발 배경
-![1](https://github.com/comiraioi/Project_YagumYagum/assets/134984755/be418e5a-038c-43db-a259-eea9c275dbaa)
+<img src="https://github.com/comiraioi/Project_YagumYagum/assets/134984755/be418e5a-038c-43db-a259-eea9c275dbaa" width=600>
 
 ## 2. 아키텍처
 
